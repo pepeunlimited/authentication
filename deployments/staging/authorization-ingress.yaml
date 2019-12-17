@@ -11,5 +11,5 @@ spec:
         paths:
           - backend:
               serviceName: authorization
-              servicePort: 8000
+              servicePort: 80
             path: /sign-in
