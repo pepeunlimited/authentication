@@ -29,4 +29,4 @@ echo "-- Building release docker images for version $VERSION --"
 echo ""
 VERSION_SLUG="${VERSION#v}"
 
-docker build --no-cache --build-arg version=${VERSION_SLUG} -t pepeunlimited/app1-k8:${VERSION_SLUG} -f ../../build/package/app1/Dockerfile ../../
+docker build --no-cache --build-arg version=${VERSION_SLUG} -t pepeunlimited/authorization:${VERSION_SLUG} -f ../../build/package/app1/Dockerfile ../../

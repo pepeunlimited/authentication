@@ -21,4 +21,4 @@ VERSION_SLUG="${VERSION#v}"
 echo "-- Updating tags to point to version $VERSION --"
 echo ""
 
-docker tag "pepeunlimited/app1-k8:${VERSION_SLUG}" "pepeunlimited/app1-k8:latest"
+docker tag "pepeunlimited/authorization:${VERSION_SLUG}" "pepeunlimited/authorization:latest"
