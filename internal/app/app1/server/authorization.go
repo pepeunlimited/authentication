@@ -82,7 +82,7 @@ func (server Authorization) Verify() http.Handler {
 		// add the headers for the microservices..
 		w.Header().Add(headers.XJwtUsername, claims.Username)
 		//w.Header().Add(headers.XJwtEmail, *claims.Email)
-		//w.Header().Add(headers.XJwtRole, *claims.Role)
+		//w.Header().Add(headers.XJwtRoles, *claims.Role)
 		//w.Header().Add(headers.XJwtUserId, strconv.FormatInt(*claims.UserId, 10))
 		w.WriteHeader(http.StatusOK)
 
