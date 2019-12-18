@@ -18,11 +18,13 @@ spec:
         - env:
             - name: RPC_USERS_HOST
               value: users.default.svc
+            - name: JWT_SECRET_KEY
+              value: v3ry-s3cr3t-k3y
             - name: NATS_HOST
               value: nats
             - name: NATS_PORT
               value: "4222"
-          image: pepeunlimited/authorization:0.1
+          image: pepeunlimited/authorization-example:0.1.1
           name: authorization
           ports:
             - containerPort: 8080
