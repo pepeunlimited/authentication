@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1e4a88c-dc40-49e6-b550-c4f666b3c047" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmd/app1/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/app1/main.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/app/app1/server/authorization.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/app1/server/authentication.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/app/app1/server/authorization_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/app1/server/authentication_test.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/internal/app/app1/validator/authorization.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/app1/validator/authorization.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/app/app1/validator/authorization.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/app1/validator/authentication.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
