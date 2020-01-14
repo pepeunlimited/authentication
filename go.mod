@@ -1,4 +1,4 @@
-module github.com/pepeunlimited/authorization
+module github.com/pepeunlimited/authentication
 
 go 1.13
 

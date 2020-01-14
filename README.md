@@ -1,6 +1,6 @@
-# Authorization
+# Authentication
 
-A starting point project to create `authorization`-service
+A starting point project to create `authentication`-service
 
 ## Go Directories
 

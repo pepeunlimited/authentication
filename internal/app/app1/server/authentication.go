@@ -1,7 +1,7 @@
 package server
 
 import (
-	"github.com/pepeunlimited/authorization/internal/app/app1/validator"
+	"github.com/pepeunlimited/authentication/internal/app/app1/validator"
 	"github.com/pepeunlimited/microservice-kit/headers"
 	"github.com/pepeunlimited/microservice-kit/httpz"
 	"github.com/pepeunlimited/microservice-kit/jwt"
@@ -22,8 +22,8 @@ const (
 	RefreshPath = "/refresh"
 )
 
-type Authorization struct {
-	validator validator.AuthorizationServerValidator
+type Authentication struct {
+	validator validator.AuthenticationServerValidator
 	jwt jwt.JWT
 }
 
@@ -32,11 +32,11 @@ type Auth struct {
 }
 
 // write the authorization logic
-func (server Authorization) isAuthValid(username string, password string) error {
+func (server Authentication) isAuthValid(username string, password string) error {
 	return nil
 }
 
-func (server Authorization) SignIn() http.Handler {
+func (server Authentication) SignIn() http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		// is the request even valid?
 		username, password, err := server.validator.SignIn(r)
@@ -58,18 +58,17 @@ func (server Authorization) SignIn() http.Handler {
 			httpz.WriteError(w, err)
 			return
 		}
-
 		httpz.WriteOk(w, Auth{Token: string(token)})
 	})
 }
 
-func (server Authorization) Refresh() http.Handler {
+func (server Authentication) Refresh() http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		//TODO...
 	})
 }
 
-func (server Authorization) Verify() http.Handler {
+func (server Authentication) Verify() http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		claims, err := server.validator.Verify(r)
 		if err != nil {
@@ -90,15 +89,15 @@ func (server Authorization) Verify() http.Handler {
 }
 
 
-func (server Authorization) NotFound() http.Handler {
+func (server Authentication) NotFound() http.Handler {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusNotFound)
 
 	})
 }
 
-func NewAuthorizationServer(secret []byte) Authorization {
+func NewAuthenticationServer(secret []byte) Authentication {
 	jwt := jwt.NewJWT(secret)
-	return Authorization{validator: validator.NewAuthorizationServerValidator(jwt),
+	return Authentication{validator: validator.NewAuthenticationServerValidator(jwt),
 						 jwt: jwt}
 }

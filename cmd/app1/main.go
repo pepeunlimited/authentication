@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/pepeunlimited/authorization/internal/app/app1/server"
+	"github.com/pepeunlimited/authentication/internal/app/app1/server"
 	"github.com/pepeunlimited/microservice-kit/jwt"
 	"github.com/pepeunlimited/microservice-kit/misc"
 	"log"
@@ -13,9 +13,9 @@ const (
 )
 
 func main() {
-	log.Printf("Starting the AuthorizationServer... version=[%v]", Version)
+	log.Printf("Starting the AuthenticationServer... version=[%v]", Version)
 	secret := misc.GetEnv(jwt.SECRET_KEY, "v3ry-s3cr3t-k3y")
-	s := server.NewAuthorizationServer([]byte(secret))
+	s := server.NewAuthenticationServer([]byte(secret))
 	mux := http.NewServeMux()
 	mux.Handle(server.SignInPath, s.SignIn())
 	mux.Handle(server.RefreshPath, s.Refresh())

@@ -3,8 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a1e4a88c-dc40-49e6-b550-c4f666b3c047" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/app1/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/app1/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/app/app1/server/authorization.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/app1/server/authentication.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/app/app1/server/authorization_test.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/app1/server/authentication_test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/app/app1/validator/authorization.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/app/app1/validator/authorization.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,12 +42,6 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="x" value="765" />
-    <option name="y" value="23" />
-    <option name="width" value="915" />
-    <option name="height" value="987" />
-  </component>
   <component name="ProjectId" id="1Ul0jmmAdwjkEvX2aKcdWnVIpUS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -55,6 +53,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
@@ -62,7 +61,7 @@
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.dep.integrator" value="true" />
     <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/deployments" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -70,19 +69,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/deployments" />
-      <recent name="$PROJECT_DIR$/internal/app/app1/server" />
-      <recent name="$PROJECT_DIR$/deployments/staging" />
-      <recent name="$PROJECT_DIR$/internal/app/app1/repository" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/deployments/production" />
       <recent name="$PROJECT_DIR$/deployments" />
       <recent name="$PROJECT_DIR$/build/package/app1" />
       <recent name="$PROJECT_DIR$/build/package/app1/wait-for-it" />
       <recent name="$PROJECT_DIR$/internal/app/app1/repository/archive" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/deployments" />
+      <recent name="$PROJECT_DIR$/internal/app/app1/server" />
+      <recent name="$PROJECT_DIR$/deployments/staging" />
+      <recent name="$PROJECT_DIR$/internal/app/app1/repository" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="Go Build.go build github.com/pepeunlimited/authorization/cmd/app1">
@@ -269,11 +268,6 @@
           <url>file:///usr/local/Cellar/go/1.12.2/libexec/src/database/sql/sql.go</url>
           <line>3051</line>
           <option name="timeStamp" value="24" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/internal/app/app1/server/authorization.go</url>
-          <line>74</line>
-          <option name="timeStamp" value="28" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

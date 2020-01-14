@@ -6,15 +6,15 @@ import (
 	"net/http"
 )
 
-type AuthorizationServerValidator struct {
+type AuthenticationServerValidator struct {
 	jwt jwt.JWT
 }
 
-func NewAuthorizationServerValidator(jwt jwt.JWT) AuthorizationServerValidator {
-	return AuthorizationServerValidator{jwt:jwt}
+func NewAuthenticationServerValidator(jwt jwt.JWT) AuthenticationServerValidator {
+	return AuthenticationServerValidator{jwt: jwt}
 }
 
-func (AuthorizationServerValidator) SignIn(r *http.Request) (*string, *string, error) {
+func (AuthenticationServerValidator) SignIn(r *http.Request) (*string, *string, error) {
 	username, password, ok := r.BasicAuth()
 	if !ok {
 		return nil, nil, httpz.NewMsgError("request not include the basic auth", http.StatusBadRequest)
@@ -22,7 +22,7 @@ func (AuthorizationServerValidator) SignIn(r *http.Request) (*string, *string, e
 	return &username, &password, nil
 }
 
-func (validator AuthorizationServerValidator) Verify(r *http.Request) (*jwt.CustomClaims, error) {
+func (validator AuthenticationServerValidator) Verify(r *http.Request) (*jwt.CustomClaims, error) {
 	authorization := r.Header.Get("Authorization")
 	bearer, err := jwt.GetBearer(authorization)
 	if err != nil {

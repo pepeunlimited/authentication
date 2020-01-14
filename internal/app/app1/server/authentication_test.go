@@ -15,7 +15,7 @@ func TestAuthorization_SignInOk(t *testing.T) {
 	username := "user2@gmail.com"
 	password := "p2ssw0rd"
 
-	server := NewAuthorizationServer([]byte(secret))
+	server := NewAuthenticationServer([]byte(secret))
 
 	//request
 	req,_ := http.NewRequest(http.MethodGet, SignInPath, nil)
@@ -36,7 +36,7 @@ func TestAuthorization_VerifyOk(t *testing.T) {
 	username := "user2@gmail.com"
 	password := "p2ssw0rd"
 
-	server := NewAuthorizationServer([]byte(secret))
+	server := NewAuthenticationServer([]byte(secret))
 
 	//request
 	req,_ := http.NewRequest(http.MethodGet, SignInPath, nil)
@@ -66,7 +66,7 @@ func TestAuthorization_VerifyOk(t *testing.T) {
 
 func TestAuthorization_Verify401(t *testing.T) {
 
-	server := NewAuthorizationServer([]byte(secret))
+	server := NewAuthenticationServer([]byte(secret))
 
 	req,_ := http.NewRequest(http.MethodGet, VerifyPath, nil)
 	jwt.SetBearer("eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InVzZXIyQGdtYWlsLmNvbSIsImVtYWlsIjpudWxsLCJyb2xlIjpudWxsLCJ1c2VyX2lkIjpudWxsLCJleHAiOjE1NzYxNjY3NDF9.v2wEmP8gdp5-_AYLAVCZaAqiGZmY6rYDQlGQCy5Mb-0", req)
